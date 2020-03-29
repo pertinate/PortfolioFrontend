@@ -9,12 +9,46 @@
 .ant-carousel .slick-slide {
     text-align: center;
     height: 200px;
-    background: #3b6978;
+    background: #84a9ac;
     overflow: hidden;
+    padding: 16px;
 }
 
 .ant-carousel .slick-slide h3 {
     color: #fff;
+}
+
+.projectCard > .ant-card-actions {
+    background-color: #3b6978;
+}
+
+.projectCard,
+.projectCard > .ant-card-actions {
+    border: 1px solid #cae8d5;
+}
+
+.projectCardAnchor > p {
+    color: #cae8d5;
+    margin: auto;
+}
+
+.projectCardAnchor:hover > p {
+    color: white;
+}
+
+.carouselLeft > svg {
+    margin: auto;
+}
+
+.ant-carousel .slick-prev,
+.ant-carousel .slick-next,
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover {
+    display: inherit;
+    font-size: 32px;
+    color: white;
+    opacity: 1;
+    -webkit-tap-highlight-color: white;
 }
 
 /* width */

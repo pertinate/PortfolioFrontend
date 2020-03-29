@@ -1,12 +1,13 @@
 import React from 'react';
 import { Card, Col, Row } from 'antd';
-const { Meta } = Card;
+import ProjectCard from './common/ProjectCard';
 
 const projects = [
     {
         projectShortName: 'FS ACI',
         projectLongName: 'Field Services Associate Call In',
-        description: 'Project description to be done.',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id est enim. Sed magna orci, dictum ut neque nec, eleifend mattis velit. Pellentesque ipsum nibh, tempor vel nunc vehicula, molestie lacinia mi. Praesent nec varius nibh. Etiam viverra enim non dui tempor, ut convallis sapien pretium. Morbi sit amet nisi augue. Proin nec suscipit odio. Nulla auctor placerat lacus. Maecenas at nisi ut erat fermentum commodo. Mauris nec neque tortor. Integer efficitur commodo velit, in elementum magna feugiat sit amet. Mauris commodo cursus enim, sed efficitur dui ullamcorper aliquet. Sed augue tellus, imperdiet id laoreet vel, fermentum ac metus. Nunc aliquet a leo sed hendrerit.',
         coverImg:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/800px-Walmart_logo.svg.png',
         avatarImg:
@@ -16,12 +17,17 @@ const projects = [
                 linkName: 'GitHub',
                 link: 'https://www.github.com/',
             },
+            {
+                linkName: 'GitHub',
+                link: 'https://www.github.com/',
+            },
         ],
     },
     {
         projectShortName: 'proj1',
         projectLongName: null,
-        description: 'Project description to be done.',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id est enim. Sed magna orci, dictum ut neque nec, eleifend mattis velit. Pellentesque ipsum nibh, tempor vel nunc vehicula, molestie lacinia mi. Praesent nec varius nibh. Etiam viverra enim non dui tempor, ut convallis sapien pretium. Morbi sit amet nisi augue. Proin nec suscipit odio. Nulla auctor placerat lacus. Maecenas at nisi ut erat fermentum commodo. Mauris nec neque tortor. Integer efficitur commodo velit, in elementum magna feugiat sit amet. Mauris commodo cursus enim, sed efficitur dui ullamcorper aliquet. Sed augue tellus, imperdiet id laoreet vel, fermentum ac metus. Nunc aliquet a leo sed hendrerit.',
         coverImg:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/800px-Walmart_logo.svg.png',
         avatarImg:
@@ -31,7 +37,8 @@ const projects = [
     {
         projectShortName: 'proj2',
         projectLongName: null,
-        description: 'Project description to be done.',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id est enim. Sed magna orci, dictum ut neque nec, eleifend mattis velit. Pellentesque ipsum nibh, tempor vel nunc vehicula, molestie lacinia mi. Praesent nec varius nibh. Etiam viverra enim non dui tempor, ut convallis sapien pretium. Morbi sit amet nisi augue. Proin nec suscipit odio. Nulla auctor placerat lacus. Maecenas at nisi ut erat fermentum commodo. Mauris nec neque tortor. Integer efficitur commodo velit, in elementum magna feugiat sit amet. Mauris commodo cursus enim, sed efficitur dui ullamcorper aliquet. Sed augue tellus, imperdiet id laoreet vel, fermentum ac metus. Nunc aliquet a leo sed hendrerit.',
         coverImg:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/800px-Walmart_logo.svg.png',
         avatarImg:
@@ -39,9 +46,10 @@ const projects = [
         cardActions: [],
     },
     {
-        projectShortName: 'proj2',
+        projectShortName: 'proj3',
         projectLongName: null,
-        description: 'Project description to be done.',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id est enim. Sed magna orci, dictum ut neque nec, eleifend mattis velit. Pellentesque ipsum nibh, tempor vel nunc vehicula, molestie lacinia mi. Praesent nec varius nibh. Etiam viverra enim non dui tempor, ut convallis sapien pretium. Morbi sit amet nisi augue. Proin nec suscipit odio. Nulla auctor placerat lacus. Maecenas at nisi ut erat fermentum commodo. Mauris nec neque tortor. Integer efficitur commodo velit, in elementum magna feugiat sit amet. Mauris commodo cursus enim, sed efficitur dui ullamcorper aliquet. Sed augue tellus, imperdiet id laoreet vel, fermentum ac metus. Nunc aliquet a leo sed hendrerit.',
         coverImg:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/800px-Walmart_logo.svg.png',
         avatarImg:
@@ -49,9 +57,10 @@ const projects = [
         cardActions: [],
     },
     {
-        projectShortName: 'proj2',
+        projectShortName: 'proj4',
         projectLongName: null,
-        description: 'Project description to be done.',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id est enim. Sed magna orci, dictum ut neque nec, eleifend mattis velit. Pellentesque ipsum nibh, tempor vel nunc vehicula, molestie lacinia mi. Praesent nec varius nibh. Etiam viverra enim non dui tempor, ut convallis sapien pretium. Morbi sit amet nisi augue. Proin nec suscipit odio. Nulla auctor placerat lacus. Maecenas at nisi ut erat fermentum commodo. Mauris nec neque tortor. Integer efficitur commodo velit, in elementum magna feugiat sit amet. Mauris commodo cursus enim, sed efficitur dui ullamcorper aliquet. Sed augue tellus, imperdiet id laoreet vel, fermentum ac metus. Nunc aliquet a leo sed hendrerit.',
         coverImg:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/800px-Walmart_logo.svg.png',
         avatarImg:
@@ -59,9 +68,10 @@ const projects = [
         cardActions: [],
     },
     {
-        projectShortName: 'proj2',
+        projectShortName: 'proj5',
         projectLongName: null,
-        description: 'Project description to be done.',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id est enim. Sed magna orci, dictum ut neque nec, eleifend mattis velit. Pellentesque ipsum nibh, tempor vel nunc vehicula, molestie lacinia mi. Praesent nec varius nibh. Etiam viverra enim non dui tempor, ut convallis sapien pretium. Morbi sit amet nisi augue. Proin nec suscipit odio. Nulla auctor placerat lacus. Maecenas at nisi ut erat fermentum commodo. Mauris nec neque tortor. Integer efficitur commodo velit, in elementum magna feugiat sit amet. Mauris commodo cursus enim, sed efficitur dui ullamcorper aliquet. Sed augue tellus, imperdiet id laoreet vel, fermentum ac metus. Nunc aliquet a leo sed hendrerit.',
         coverImg:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/800px-Walmart_logo.svg.png',
         avatarImg:
@@ -69,9 +79,10 @@ const projects = [
         cardActions: [],
     },
     {
-        projectShortName: 'proj2',
+        projectShortName: 'proj6',
         projectLongName: null,
-        description: 'Project description to be done.',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id est enim. Sed magna orci, dictum ut neque nec, eleifend mattis velit. Pellentesque ipsum nibh, tempor vel nunc vehicula, molestie lacinia mi. Praesent nec varius nibh. Etiam viverra enim non dui tempor, ut convallis sapien pretium. Morbi sit amet nisi augue. Proin nec suscipit odio. Nulla auctor placerat lacus. Maecenas at nisi ut erat fermentum commodo. Mauris nec neque tortor. Integer efficitur commodo velit, in elementum magna feugiat sit amet. Mauris commodo cursus enim, sed efficitur dui ullamcorper aliquet. Sed augue tellus, imperdiet id laoreet vel, fermentum ac metus. Nunc aliquet a leo sed hendrerit.',
         coverImg:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/800px-Walmart_logo.svg.png',
         avatarImg:
@@ -79,9 +90,10 @@ const projects = [
         cardActions: [],
     },
     {
-        projectShortName: 'proj2',
+        projectShortName: 'proj7',
         projectLongName: null,
-        description: 'Project description to be done.',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id est enim. Sed magna orci, dictum ut neque nec, eleifend mattis velit. Pellentesque ipsum nibh, tempor vel nunc vehicula, molestie lacinia mi. Praesent nec varius nibh. Etiam viverra enim non dui tempor, ut convallis sapien pretium. Morbi sit amet nisi augue. Proin nec suscipit odio. Nulla auctor placerat lacus. Maecenas at nisi ut erat fermentum commodo. Mauris nec neque tortor. Integer efficitur commodo velit, in elementum magna feugiat sit amet. Mauris commodo cursus enim, sed efficitur dui ullamcorper aliquet. Sed augue tellus, imperdiet id laoreet vel, fermentum ac metus. Nunc aliquet a leo sed hendrerit.',
         coverImg:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/800px-Walmart_logo.svg.png',
         avatarImg:
@@ -89,9 +101,10 @@ const projects = [
         cardActions: [],
     },
     {
-        projectShortName: 'proj2',
+        projectShortName: 'proj8',
         projectLongName: null,
-        description: 'Project description to be done.',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id est enim. Sed magna orci, dictum ut neque nec, eleifend mattis velit. Pellentesque ipsum nibh, tempor vel nunc vehicula, molestie lacinia mi. Praesent nec varius nibh. Etiam viverra enim non dui tempor, ut convallis sapien pretium. Morbi sit amet nisi augue. Proin nec suscipit odio. Nulla auctor placerat lacus. Maecenas at nisi ut erat fermentum commodo. Mauris nec neque tortor. Integer efficitur commodo velit, in elementum magna feugiat sit amet. Mauris commodo cursus enim, sed efficitur dui ullamcorper aliquet. Sed augue tellus, imperdiet id laoreet vel, fermentum ac metus. Nunc aliquet a leo sed hendrerit.',
         coverImg:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/800px-Walmart_logo.svg.png',
         avatarImg:
@@ -101,72 +114,14 @@ const projects = [
 ];
 
 export default function DetailedProjects(props) {
-    let projectList = projects.reduce((acc, next) => {
-        let index = acc.length - 1;
-        if (index === -1 || acc[index].length === 2) {
-            acc.push([next]);
-        } else {
-            acc[index].push(next);
-        }
-        return acc;
-    }, []);
     return (
         <div
             style={{
                 margin: '15px',
             }}
         >
-            {projectList.map((row, index) => {
-                return row.map((project, projectIndex) => {
-                    return (
-                        <Card
-                            style={{
-                                width: 500,
-                                float: `${index % 2 === 0 ? 'left' : 'right'}`,
-                                margin: '20px',
-                                padding: '8px',
-                            }}
-                            className='projectCard'
-                            cover={
-                                <img
-                                    alt='example'
-                                    style={{
-                                        margin: '64px 24px',
-                                        width: 442,
-                                    }}
-                                    src={project.coverImg}
-                                />
-                            }
-                            actions={project.cardActions.map((action) => {
-                                return (
-                                    <a href={action.link} target='_blank'>
-                                        <p>{action.linkName}</p>
-                                    </a>
-                                );
-                            })}
-                            key={`project#${index}`}
-                        >
-                            <Meta
-                                avatar={
-                                    <img
-                                        alt='example'
-                                        style={{
-                                            width: 80,
-                                            height: 80,
-                                        }}
-                                        src={project.avatarImg}
-                                    />
-                                }
-                                title={`${project.projectShortName}${
-                                    project.projectLongName !== null
-                                        ? ` (${project.projectLongName})`
-                                        : ''
-                                }`}
-                                description={project.description}
-                            />
-                        </Card>
-                    );
-                });
+            {projects.map((project, projectIndex) => {
+                return <ProjectCard project={project} index={projectIndex} />;
             })}
         </div>
     );

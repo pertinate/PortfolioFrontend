@@ -17,10 +17,38 @@ export default class Bedrock extends Component {
 
         this.state = {
             selected: 'portfolio',
+            browserHeight: 0,
+            browserWidth: 0,
+            randomDescription: '',
         };
     }
 
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+
+        fetch(
+            `https://hipsum.co/api/?type=hipster-centric&sentences=${(Math.random() +
+                1) *
+                30}`
+        )
+            .then((result) => result.json())
+            .then((result) => this.setState({ randomDescription: result[0] }));
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions = () => {
+        this.setState({
+            browserWidth: window.innerWidth,
+            browserHeight: window.innerHeight,
+        });
+    };
+
     render = () => {
+        console.log(this.state.browserWidth, this.state.browserHeight);
         return (
             <Layout id='main'>
                 <Header
@@ -103,10 +131,16 @@ export default class Bedrock extends Component {
                         }}
                     >
                         {this.state.selected === 'portfolio' && (
-                            <Portfolio test='Portfolio' />
+                            <Portfolio
+                                test='Portfolio'
+                                randomDescription={this.state.randomDescription}
+                            />
                         )}
                         {this.state.selected === 'detailedProjects' && (
-                            <DetailedProjects test='DetailedProjects' />
+                            <DetailedProjects
+                                test='DetailedProjects'
+                                width={this.state.browserWidth}
+                            />
                         )}
                     </Content>
                 </Layout>
