@@ -73,10 +73,30 @@ export default class Bedrock extends Component {
                         theme='dark'
                         multiple={false}
                         onClick={(e) => this.setState({ selected: e.key })}
-                        style={{ float: 'right' }}
+                        style={{ float: 'right', marginBottom: '2px' }}
                     >
-                        <Menu.Item key='portfolio'>Portfolio</Menu.Item>
-                        <Menu.Item key='detailedProjects'>
+                        <Menu.Item
+                            key='portfolio'
+                            style={{
+                                boxShadow: `inset 0 -2px 0px 0px ${
+                                    this.state.selected === 'portfolio'
+                                        ? 'white'
+                                        : 'transparent'
+                                }`,
+                            }}
+                        >
+                            Portfolio
+                        </Menu.Item>
+                        <Menu.Item
+                            key='detailedProjects'
+                            style={{
+                                boxShadow: `inset 0 -2px 0px 0px ${
+                                    this.state.selected === 'detailedProjects'
+                                        ? 'white'
+                                        : 'transparent'
+                                }`,
+                            }}
+                        >
                             Detailed Projects
                         </Menu.Item>
                     </Menu>
