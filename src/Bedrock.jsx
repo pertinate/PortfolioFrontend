@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './Bedrock.css';
-import { Layout, Divider, Menu, Row, Col, Card } from 'antd';
+import { Layout, Menu } from 'antd';
 import {
     GithubOutlined,
     LinkedinOutlined,
@@ -9,24 +8,21 @@ import {
 } from '@ant-design/icons';
 import Portfolio from './components/Portfolio';
 import DetailedProjects from './components/DetailedProjects';
-const { Header, Content, Footer, Sider } = Layout;
+import Bio from './components/common/Bio';
+const { Header, Content } = Layout;
 
 export default class Bedrock extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
             selected: 'portfolio',
-            browserHeight: 0,
-            browserWidth: 0,
             randomDescription: '',
+            x: 10,
+            y: 10,
         };
     }
 
     componentDidMount() {
-        this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions);
-
         fetch(
             `https://hipsum.co/api/?type=hipster-centric&sentences=${(Math.random() +
                 1) *
@@ -36,19 +32,7 @@ export default class Bedrock extends Component {
             .then((result) => this.setState({ randomDescription: result[0] }));
     }
 
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateWindowDimensions);
-    }
-
-    updateWindowDimensions = () => {
-        this.setState({
-            browserWidth: window.innerWidth,
-            browserHeight: window.innerHeight,
-        });
-    };
-
     render = () => {
-        console.log(this.state.browserWidth, this.state.browserHeight);
         return (
             <Layout id='main'>
                 <Header
@@ -68,7 +52,8 @@ export default class Bedrock extends Component {
                         Nicholas Evans
                     </h1>
                     <Menu
-                        defaultSelectedKeys={['portfolio']}
+                        defaultSelectedKeys={[this.state.selected]}
+                        selectedKeys={[this.state.selected]}
                         mode='horizontal'
                         theme='dark'
                         multiple={false}
@@ -86,6 +71,18 @@ export default class Bedrock extends Component {
                             }}
                         >
                             Portfolio
+                        </Menu.Item>
+                        <Menu.Item
+                            key='bio'
+                            style={{
+                                boxShadow: `inset 0 -2px 0px 0px ${
+                                    this.state.selected === 'bio'
+                                        ? 'white'
+                                        : 'transparent'
+                                }`,
+                            }}
+                        >
+                            Bio
                         </Menu.Item>
                         <Menu.Item
                             key='detailedProjects'
@@ -154,6 +151,9 @@ export default class Bedrock extends Component {
                             <Portfolio
                                 test='Portfolio'
                                 randomDescription={this.state.randomDescription}
+                                changeToBio={() =>
+                                    this.setState({ selected: 'bio' })
+                                }
                             />
                         )}
                         {this.state.selected === 'detailedProjects' && (
@@ -162,6 +162,7 @@ export default class Bedrock extends Component {
                                 width={this.state.browserWidth}
                             />
                         )}
+                        {this.state.selected === 'bio' && <Bio />}
                     </Content>
                 </Layout>
             </Layout>

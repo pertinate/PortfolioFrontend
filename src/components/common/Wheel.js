@@ -2,9 +2,9 @@ import React from 'react';
 import { Carousel } from 'antd';
 
 export default function Wheel(props) {
-    let slides = props.skillSets.map(skill => {
+    let slides = props.skillSets.map((skill, index) => {
         return (
-            <div>
+            <div key={`skill#${index}`}>
                 <a href={`#${skill.skillName}`}>
                     <h3>
                         {skill.skillName}
@@ -18,12 +18,13 @@ export default function Wheel(props) {
     });
     return (
         <Carousel
-            slidesToShow={2}
+            slidestoshow={2}
             arrows={true}
             prevArrow={<span />}
             nextArrow={<span />}
-            style={{ margin: '36px', opacity: 1 }}
-            waitForAnimate={false}
+            style={{ margin: '36px', opacity: 1, border: '1px solid white' }}
+            waitforanimate={false}
+            className="test"
         >
             {slides}
         </Carousel>
