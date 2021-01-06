@@ -16,15 +16,15 @@ function Header(props: Props) {
                 ({ isSignedIn, user, providerId }) => {
                     return (
                         <div
-                            className='flex flex-row h-48 px-64 py-2 w-auto bg-white shadow-md z-50'
+                            className='flex flex-col md:flex-row h-auto px-24 py-4 md:px-64 md:py-2 w-auto bg-white shadow-md z-50'
                         >
                             <div
-                                className='flex flex-col justify-center align-middle p-2'
+                                className='flex flex-row justify-center align-middle p-2'
                             >
-                                <img src='/images/profile_picture.jpg' alt='Profile Picture' className='shadow-lg rounded-full h-40' />
+                                <img src='/images/profile_picture.jpg' alt='Profile Picture' className='shadow-lg rounded-full h-40 w-40' />
                             </div>
                             <div
-                                className='flex-auto flex flex-col px-4 py-1 justify-center'
+                                className='flex-auto flex flex-col px-4 py-1 justify-center items-center'
                             >
                                 <div>
                                     <h1
@@ -44,7 +44,7 @@ function Header(props: Props) {
                                 </div>
                             </div>
                             <div
-                                className='flex-none flex flex-row items-center'
+                                className='flex-none flex flex-row justify-center md:items-center'
                             >
                                 <a
                                     className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded inline-flex items-center'
