@@ -3,7 +3,8 @@ import { FirebaseAuthConsumer } from '@react-firebase/auth';
 import firebase from 'firebase';
 import React, { useContext } from 'react';
 import { Nav } from 'react-bootstrap';
-import { SiLinkedin, SiGithub, SiStackoverflow, SiCodewars, SiGmail } from 'react-icons/si';
+import { HiMail, HiOutlineShare } from 'react-icons/hi';
+import { SiLinkedin, SiGithub, SiStackoverflow, SiCodewars, SiGmail, SiBlogger } from 'react-icons/si';
 
 interface Props { }
 
@@ -24,7 +25,7 @@ function Header(props: Props) {
                                 <img src='/images/profile_picture.jpg' alt='Profile Picture' className='shadow-lg rounded-full h-40 w-40' />
                             </div>
                             <div
-                                className='flex-auto flex flex-col px-4 py-1 justify-center items-center'
+                                className='flex-auto flex flex-col px-4 py-1 justify-center items-center md:items-baseline'
                             >
                                 <div>
                                     <h1
@@ -37,19 +38,53 @@ function Header(props: Props) {
                                 <div
                                     className='flex flex-row items-center'
                                 >
-                                    <SiLinkedin className='h-8 w-8 m-2' />
-                                    <SiGithub className='h-8 w-8 m-2' />
-                                    <SiStackoverflow className='h-8 w-8 m-2' />
-                                    <SiCodewars className='h-8 w-8 m-2' />
+                                    <a
+                                        href='https://linkedin.com/in/nicholas-evans-712b69a4/'
+                                        target='_blank'
+                                        rel='noreferrer'
+                                    >
+                                        <SiLinkedin className='h-8 w-8 m-2' />
+                                    </a>
+                                    <a
+                                        href='https://linkedin.com/in/nicholas-evans-712b69a4/'
+                                        target='_blank'
+                                        rel='noreferrer'
+                                    >
+                                        <SiGithub className='h-8 w-8 m-2' />
+                                    </a>
+                                    <a
+                                        href='https://linkedin.com/in/nicholas-evans-712b69a4/'
+                                        target='_blank'
+                                        rel='noreferrer'
+                                    >
+                                        <SiStackoverflow className='h-8 w-8 m-2' />
+                                    </a>
+                                    <a
+                                        href='https://linkedin.com/in/nicholas-evans-712b69a4/'
+                                        target='_blank'
+                                        rel='noreferrer'
+                                    >
+                                        <SiCodewars className='h-8 w-8 m-2' />
+                                    </a>
                                 </div>
                             </div>
                             <div
                                 className='flex-none flex flex-row justify-center md:items-center'
                             >
                                 <a
-                                    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded inline-flex items-center'
-                                    href='/s'
-                                ><SiGmail /><span className='ml-2'>Contact</span></a>
+                                    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded inline-flex items-center m-2'
+                                    href='mailto:nicholas@pertinate.info'
+                                    target='_blank'
+                                    rel='noreferrer'
+                                >
+                                    <HiMail /><span className='ml-2'>Contact</span>
+                                </a>
+                                <a
+                                    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded inline-flex items-center m-2'
+                                    href='/blog'
+                                >
+                                    <HiOutlineShare /><span className='ml-2'>Blog</span>
+                                </a>
                             </div>
                         </div>
                         // <di>
