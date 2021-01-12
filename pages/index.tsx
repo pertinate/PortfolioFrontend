@@ -10,10 +10,38 @@ import WorkExperience from "../components/WorkExperience";
 export default function Home() {
     const states = useAppContext();
     return (
-
         <div
             className='flex-auto bg-gray-300 md:overflow-auto '
         >
+            <Head>
+                <title>
+                    Portfolio - Nicholas Evans
+                </title>
+                <meta
+                    property='og:url'
+                    content='http://pertinate.info'
+                />
+                <meta
+                    property='og:type'
+                    content='website'
+                />
+                <meta
+                    property='og:title'
+                    content='Portfolio - Nicholas Evans'
+                />
+                <meta
+                    property='twitter:card'
+                    content={`Nicholas Evans' portfolio website`}
+                />
+                <meta
+                    property='og:description'
+                    content={`Nicholas Evans' portfolio website`}
+                />
+                <meta
+                    property='og:image'
+                    content='http://pertinate.info/images/logo.jpeg'
+                />
+            </Head>
             <div
                 className='flex flex-col md:flex-row justify-center pt-8'
             >
