@@ -1,6 +1,3 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-import { FirebaseAuthConsumer } from '@react-firebase/auth';
-import firebase from 'firebase';
 import React, { useContext } from 'react';
 import { HiMail, HiOutlineShare } from 'react-icons/hi';
 import { SiLinkedin, SiGithub, SiStackoverflow, SiCodewars, SiGmail, SiBlogger } from 'react-icons/si';
